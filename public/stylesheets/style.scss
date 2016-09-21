@@ -1,0 +1,32 @@
+@import '_colours';
+@import '_conditionals';
+@import '_css3';
+@import '_device-pixels';
+@import '_font_stack';
+@import '_grid_layout';
+@import '_helpers';
+@import '_measurements';
+@import '_shims';
+@import '_typography';
+@import '_url-helpers';
+
+strong {
+    font-weight: bold;
+}
+
+.grid-row {
+      @extend %grid-row;
+
+      .column-one-third {
+              @include grid-column( 1/3  );
+                
+      }
+      .column-two-thirds {
+              @include grid-column( 2/3  );
+      }
+
+      .column-one-quarter {
+              @include grid-column( 1/4  );
+      }
+}
+

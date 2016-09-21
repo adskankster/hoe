@@ -1,0 +1,63 @@
+//- main.pug
+//-
+//- This file holds the header/footer definitions for the site. 
+//- The html is rendered by pug.
+
+//- mixin to display a single applicant's work experience within a grid.
+mixin job(place, from, to, summary)
+    .grid-row
+        .column-one-third
+            p: strong #{place}
+        .column-one-third 
+            p #{from} - #{to}
+        .column-one-third
+            p #{summary}
+
+//- The main document
+doctype html
+html(charset="utf-8")
+    head
+        title Home Office Evaluation
+        //- Use govuk stylesheets to mimic site behaviour and look and feel
+        link(rel='stylesheet', href='/stylesheets/govuk-template.css?0.18.2')
+        link(rel='stylesheet', href='/stylesheets/govuk-template-print.css?0.18.2')
+        link(rel='stylesheet', href='/stylesheets/fonts.css?0.18.2')
+        link(rel='stylesheet', href='/stylesheets/main.css')
+        //- website specific stylesheet - generated from sass
+        link(rel='stylesheet', href='/stylesheets/style.css')
+
+        meta(name='viewport', content='width=device-width, initial-scale=1')
+        meta(name='og:image', content="/images/opengraph-image.png?0.18.2")
+        
+    body.js-enabled
+
+        header#global-header(role='banner')
+            .header-wrapper
+                .header-global
+                    .header-logo
+                        a(title='Go to the HOE homepage' id='logo' class='content' href='/') 
+                            img(src='images/gov.uk_logotype_crown_invert_trans.png', width='35', height='31')
+                            | HOE
+        #global-header-bar
+
+        main#content(role="main")
+
+            //- content goes here
+            block content
+
+        footer#footer.group.js-footer(role='contentinfo')
+            .footer-wrapper
+                .footer-meta
+                    .footer-meta-inner
+                        .open-government-licence
+                            p.logo: a(href='' rel='license') Open Government Licence
+                            p
+                            | All content is available under the 
+                            a(href='', rel='license') 
+                                    Open Government Licence v3.0
+                            | , except where otherwise stated.
+
+                    .copyright
+                        p Copyright goes here
+
+

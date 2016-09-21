@@ -1,0 +1,18 @@
+//- jobAApplicationList.pug
+//- Displays a list of names for job A. This sets up the view where the 
+//- details are on a separate page, one per page.
+extends main.pug
+
+block content
+    a(class='link-back' href='home') Back
+    h2.heading-large Job A - Applicant List 
+    .grid-row
+        .column-one-third
+            ul.list
+            //- iterate if there are names, or say if there aren't.
+            each name in names
+                li 
+                    // Search for inidividuals by id. 
+                    a(href='applicant?id=' + name._id) #{name.name}
+            else
+                p There are no applicants for this job.

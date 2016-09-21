@@ -1,0 +1,20 @@
+{
+  "name": "hoe",
+  "version": "0.0.1",
+  "description": "HOE - Home Office Evaluation example server",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.14.0",
+    "govuk_frontend_toolkit": "^4.18.1",
+    "jade": "^1.11.0",
+    "mongoose": "^4.6.0",
+    "pug": "^2.0.0-beta6"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Adam Wellings",
+  "license": "ISC"
+}

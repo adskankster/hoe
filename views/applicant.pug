@@ -1,0 +1,40 @@
+//- applicant.pug
+//- Displays a single job applicant's data on a page. 
+extends main.pug
+block content
+    a(class='link-back' href='jobA') Back
+    h3.heading-medium Applicant Details
+    //- Check if we have any details to display.
+    if details
+        .grid-row
+            .column-one-third
+                p
+
+        .grid-row
+            .column-one-third
+                h2.heading-large #{details.name}
+
+        .grid-row
+            .column-one-third
+                p
+
+        .grid-row
+            .column-one-third
+                p Date Of Birth: 
+            .column-one-third
+                p #{details.dob}
+
+        .grid-row
+            .column-one-third
+                h3.heading-medium Summary of Work Experience
+
+        //- repeating blocks of data
+        each workplace in details.workExperience
+            +job(workplace.place, 
+                workplace.from,
+                workplace.to,
+                workplace.summary)
+    else
+        h2.heading-large No Applicant Found
+    
+

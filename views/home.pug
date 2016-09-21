@@ -1,0 +1,12 @@
+//- home.pug
+//- Used to display site home page. Has no dynamic data, but could do.
+extends main.pug
+block content
+    h2.heading-large Home Office Evaluation
+    h3.heading-medium Job List
+    ul
+        // Job lists - would normally be generated from database
+        li: a(href='jobA') Job A Applicants
+        li: a(href='jobB') Job B Applicants
+
+

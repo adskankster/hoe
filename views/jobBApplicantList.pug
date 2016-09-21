@@ -1,0 +1,24 @@
+//- jobBApplicationList.pug
+//- Lists the applicants for job B. Sets up the view where the applicant details
+//- are on the list page, but in expanding blocks, so they can be shown/hidden.
+extends main.pug
+
+block content
+    a(class='link-back' href='home') Back
+    h3.heading-medium Job B - Applicant List 
+
+    //- Iterate through the llist if there are any names, or say if not.
+    each name in names
+        details
+            //- sets up gouk Hidden Text box
+            summary: span.summary #{name.name}
+            .panel.panel-border-narrow
+                p D.O.B - #{name.dob}
+                each workplace in name.workExperience
+                    +job(workplace.place,
+                        workplace.from,
+                        workplace.to,
+                        workplace.summary)
+    else
+        p There are no applicants for this job.
+

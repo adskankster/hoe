@@ -1,0 +1,68 @@
+/* line 46, /home/skanky/projects/nodejs/hoe/node_modules/govuk_frontend_toolkit/stylesheets/_shims.scss */
+.grid-row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* line 64, /home/skanky/projects/nodejs/hoe/node_modules/govuk_frontend_toolkit/stylesheets/_grid_layout.scss */
+.grid-row {
+  margin: 0 -15px;
+}
+
+/* line 46, /home/skanky/projects/nodejs/hoe/node_modules/govuk_frontend_toolkit/stylesheets/_shims.scss */
+.grid-row:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* line 13, style.scss */
+strong {
+  font-weight: bold;
+}
+
+/* line 20, style.scss */
+.grid-row .column-one-third {
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media (min-width: 641px) {
+  /* line 20, style.scss */
+  .grid-row .column-one-third {
+    float: left;
+    width: 33.33333%;
+  }
+}
+/* line 24, style.scss */
+.grid-row .column-two-thirds {
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media (min-width: 641px) {
+  /* line 24, style.scss */
+  .grid-row .column-two-thirds {
+    float: left;
+    width: 66.66667%;
+  }
+}
+/* line 28, style.scss */
+.grid-row .column-one-quarter {
+  padding: 0 15px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+@media (min-width: 641px) {
+  /* line 28, style.scss */
+  .grid-row .column-one-quarter {
+    float: left;
+    width: 25%;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
