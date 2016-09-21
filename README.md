@@ -1,7 +1,7 @@
 HOE - Home Office Evaluation
 ============================
 
-This is an application, written in javascript, that uses **node.js** and **express** to serve up data (a list of job applicants) from a **MongoDB** database, using **mongoose**. The data is rendered using **pug** (formerly **jade**) and makes use of ukgov stylesheets, as well as some mxins from the ukgov_frontend_toolkit, via a **SASS**-generated css, additional, stylesheet.
+This is an application, written in javascript, that uses **node.js** and **express** to serve up data (a list of job applicants) from a **MongoDB** database, using **mongoose**. The data is rendered using **pug** (formerly **jade**) and makes use of ukgov stylesheets, as well as some mxins from the ukgov_frontend_toolkit, via an additional,  **SASS**-generated css stylesheet.
 
 Installation
 ------------
